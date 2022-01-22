@@ -1,0 +1,174 @@
+<header>
+
+    <div>
+        <!-- ==================  Navigation (main menu) ================== -->
+        <!-- <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+        <script type="text/javascript">
+            $(function() {
+
+                // Toggle menu
+                // ------------------------------------
+
+                $('.toggle-menu').on('click', function() {
+                    $(this).toggleClass('open');
+                    $(this).parent().find('.navigation-block').toggleClass('open');
+                });
+
+                var $box = $('.options-content .options .box');
+                $box.click(function() {
+                    var $this = $(this),
+                        $boxWrapper = $this.closest('.box-wrapper');
+
+                    if ($this.hasClass('active')) {
+                        $boxWrapper.removeClass('box-wrapper-selected');
+                        $this.removeClass('active');
+                    } else {
+                        $boxWrapper.addClass('box-wrapper-selected');
+                        $this.closest('.options-content').find('.box').removeClass('active');
+                        $this.addClass('active');
+                    }
+                });
+
+                // Mobile - Dropdown menu
+                // ------------------------------------
+
+                $('.open-dropdown').on('click', function(e) {
+
+                    e.preventDefault();
+
+                    if ($(document).width() >= 992) {
+                        return false;
+                    }
+
+                    var $this = $(this),
+                        $li = $this.closest('li'),
+                        $drop = $li.find('ul');
+
+                    $li.toggleClass('expanded');
+
+                    if ($li.hasClass('expanded')) {
+                        $drop.slideDown();
+                    } else {
+                        $drop.slideUp();
+                    }
+                });
+
+                // Desktop - Dropdown menu
+                //---------------------------
+
+                $('.navigation-block > ul > li').bind({
+                    mouseenter: function() {
+                        if ($(document).width() < 992) {
+                            return false;
+                        }
+                        $(this).addClass('hovered');
+                    },
+                    mouseleave: function() {
+                        if ($(document).width() < 992) {
+                            return false;
+                        }
+                        $(this).removeClass('hovered').removeAttr('class');
+                    },
+                });
+
+            });
+        </script> -->
+
+        <!-- ======================== Navigation ======================== -->
+
+        <div class="container">
+
+            <!-- === navigation-top === -->
+
+            <nav class="navigation-top clearfix">
+
+                <!-- navigation-top-left -->
+
+                <div class="navigation-top-left">
+                    {{ nav:top_left_nav }}
+                    <a class="box" href="{{ url }}">
+                        <i class="{{ icon }} fa-2x"></i>
+                    </a>
+                    {{ /nav:top_left_nav }}
+                    <!-- <a class="box" href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="box" href="#">
+                        <i class="fa fa-youtube"></i>
+                    </a> -->
+                </div>
+
+                <!-- navigation-top-right -->
+
+                <div class="navigation-top-right">
+                    {{ nav:top_right_nav }}
+                    <a href="{{ url }}" class="box" href="">
+                        <i class="icon icon-star"></i>
+                        {{ title }}
+                    </a>
+                    {{ /nav:top_right_nav }}
+                </div>
+            </nav>
+
+            <!-- === navigation-main === -->
+
+            <nav class="navigation-main clearfix">
+
+                <!-- logo -->
+
+                <div class="logo animated fadeIn">
+                    <a href="/">
+                        <img class="logo-desktop" src="{{ header:logo }}" alt="Alternate Text">
+                        <img class="logo-mobile" src="{{ header:logo }}" alt="Alternate Text">
+                    </a>
+                </div>
+
+                <!-- toggle-menu -->
+
+                <div class="toggle-menu bg-green-900"><i class="fa fa-bars text-white"></i></div>
+
+                <!-- navigation-block -->
+
+                <div class="navigation-block clearfix">
+
+                    <!-- navigation-left -->
+
+                    <ul class="navigation-left">
+                        {{ nav:left_nav }}
+                        {{ if children }}
+                        <li>
+                            <a href="#">{{ title }}<span class="open-dropdown"><i class="fa fa-angle-down px-3"></i></span></a>
+                            <ul>
+                                {{ children }}
+                                <li><a href="#">{{ title }}</a></li>
+                                {{ /children }}
+                            </ul>
+                        </li>
+                        {{ else }}
+                        <li>
+                            <a href="{{ url }}">{{ title }}</a>
+                        </li>
+                        {{ /if }}
+                        {{ /nav:left_nav }}
+
+                    </ul>
+
+                    <!-- navigation-right -->
+
+                    <ul class="navigation-right">
+                        {{ nav:right_nav }}
+                        <li>
+                            <a href="{{ url }}">{{ title }}</a>
+                        </li>
+                        {{ /nav:right_nav }}
+                    </ul>
+
+                </div>
+                <!--/navigation-block-->
+
+            </nav>
+        </div>
+        <!--/container-->
+    </div>
+
+</header>

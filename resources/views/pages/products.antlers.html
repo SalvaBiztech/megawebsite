@@ -1,0 +1,166 @@
+<section class="frontpage-slider">
+    <div class="owl-slider owl-slider-header owl-slider-fullscreen">
+        <!-- === slide item === -->
+
+        {{ frontpage:sliders }}
+        {{ if type == 'slider' }}
+        <div class="item" id="desktop-ban1" style="background-image: url({{ slide_image }});">
+            <div class="box text-center">
+                <!-- <div class="container mobile-content">
+
+                    <p style="font-size: 60px; font-weight: 400;">Grab An Exciting <b style="font-weight: 600;">Free Stay</b></p>
+                    <p style="font-size: 60px; font-weight: 400; margin-top: -30px;">With Hallmark Club Card</p>
+
+                    <div class="animated" data-animation="fadeInUp">
+                        <a href="" class="btn btn-clean-dark"><b>Book Now</b></a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="item" id="mobile-ban1" style="background-image: url(assets/images/QH-MOB-Slider3.jpg);">
+                <div class="box text-center">
+                    <div class="container">
+                      
+                        <p style="font-size: 25px; color: #fff; font-weight: 400;">Grab An Exciting <b style="font-weight: 600;">Free Stay</b></p>
+                        <p style="font-size: 25px; color: #fff; font-weight: 400;">With Hallmark Club Card</p>
+                     
+                        <div class="animated" style="margin-top: 20px;">
+                            <a href="queens-hallmark.php" class="btn-mobile1"><b>Book Now</b></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        {{ /if }}
+        {{ /frontpage:sliders }}
+
+    </div>
+    <!--/owl-slider-->
+</section>
+
+<section class="facilities">
+    <div class="box text-center">
+        <p style="color: #000; font-size: 30px;" class="title animated" data-animation="fadeInDown">
+            Welcome to Mega Panels
+        </p>
+        <p style="color: #0F5B35; font-size: 60px; font-weight: 600;" class="trans">
+            <span><b></b></span>
+        </p>
+        <!-- <p style="color: #a67e50; font-size: 25px;">Grab an exciting deals with our club card</p> -->
+        <!-- <div class="animated" data-animation="fadeInUp">
+                    <a href="queens-hallmark.php" class="btn btn-black"><b>Book Now</b></a>
+                </div> -->
+    </div>
+</section>
+<!-- ======================== Facilities ======================== -->
+
+<section class="rooms">
+    <div class="container mx-auto max-w-8xl text-center px-48">
+        <div class="bg-green-600 py-10">
+            <h2 class="text-3xl text-white">Your Ideal Construction Solution</h2>
+            <p class="text-center text-2xl text-white mt-5">From stylish home units to practical spaces and functional office structur es, Mega Panels can help you
+                build your dream project.</p>
+        </div>
+    </div>
+
+    <div class="container mx-auto max-w-8xl px-48">
+        <a href="#"><img class="one-card w-full" src="{{ frontpage:home_banner }}" /></a>
+    </div>
+</section>
+
+
+<!-- ======================== Features ======================== -->
+{{ partial:partials/features }}
+<div class="container max-w-8xl mx-auto px-4 sm:px-6  mt-10 ">
+
+    <div class="py-12 bg-white mb-10">
+        <div class="container max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="mt-10 lg:px-48">
+
+                {{ content }}
+
+                {{ if type == "blocks"}}
+                <div style="background-color: #f8f8f8;" class="relative w-full mb-20 rounded-md shadow-md px-6 py-5">
+                    <dl class=" grid  md:grid-cols-2 gap-10">
+
+                        <div class="py-2 px-1 border-2 border-orange-500 col-span-1">
+                            <img class="w-full  h-full" src="{{ image }}" alt="">
+                        </div>
+
+                        <div class="mt-9 col-span-1 flex justify-center flex-col">
+                            <h1 class="ribbon mb-6">
+                                <strong class="ribbon-content text-4xl font-semibold ">{{ title }}</strong>
+                            </h1>
+                            <dd class="mt-2  text-2xl text-gray-900 p-1 text-justify">
+                                {{ paragraph }}
+                            </dd>
+                        </div>
+
+                    </dl>
+
+                </div>
+                {{ /if }}
+
+
+
+                <dl class="mt-10 mb-10">
+
+                    {{ if type == "blocks_box"}}
+                    <dt class="mt-9 mb-10">
+                        <h1 class="ribbon ">
+                            <strong class="ribbon-content  text-4xl font-semibold">{{ heading }}</strong>
+                        </h1>
+                    </dt>
+
+                    <div class="grid md:grid-cols-3 gap-20">
+                        {{ boxes }}
+
+                        {{ if type == 'box'}}
+                        <div style="background-color: #f8f8f8;" class="relative col-span-1 w-full  rounded-md shadow-md px-6 py-5">
+                            <div class="w-full px-1 border-2 border-green-800">
+                                <img class="w-full h-72 " src="{{ image }}" alt="">
+                            </div>
+                            <dd class="mt-2 mb-10 px-10 text-2xl text-gray-900 p-2 text-justify">
+                                {{ textarea }}
+                            </dd>
+                        </div>
+                        {{ /if}}
+
+                        {{ /boxes}}
+                    </div>
+                    {{ /if }}
+
+
+                </dl>
+
+                {{ /content }}
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<style>
+    ul,
+    ol {
+        padding: 20px;
+    }
+
+    ol li {
+        list-style-type: disc !important;
+        padding: 5px;
+    }
+
+    ul li {
+        list-style-type: disc !important;
+        padding: 5px;
+    }
+
+    p {
+        margin-bottom: 15px;
+
+    }
+</style>

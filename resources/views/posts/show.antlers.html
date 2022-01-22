@@ -1,0 +1,49 @@
+{{ partial:partials/inner-banner }}
+
+<!-- ======================== Facilities ======================== -->
+
+<section class="rooms">
+    <div class="text-center container max-w-7xl mx-auto">
+        <div class=" mx-10 rounded-md bg-green-800 px-10 py-10">
+            <h2 class="text-white text-3xl">Your Ideal Construction Solution</h2>
+            <p class="text-white">From stylish home units to practical spaces and functional office structur es, Mega Panels can help you
+                build your dream project.</p>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <a href="#"><img class="one-card" style="width: 1305px;" src="{{ frontpage:home_banner }}" /></a>
+    </div> -->
+</section>
+
+
+<!-- ======================== Facilities ======================== -->
+
+
+{{ partial:partials/features }}
+
+<div class="container md:px-56 max-w-8xl mx-auto  mt-10 ">
+
+    <div class="py-12 bg-white shadow-md mb-10">
+        <div class="mt-10">
+
+            <div class="relative w-full  rounded-md px-6 py-5">
+                {{ content_blocks }}
+                <dl class="grid md:grid-cols-1 px-16 gap-20">
+                    {{ if type == "card"}}
+                    <div class="py-2 px-2 w-full col-span-2">
+                        <!-- <img class="w-full h-full" src="{{ image }}" alt=""> -->
+                    </div>
+                    <dd class="mt-2  text-3xl text-gray-900 col-span-1 p-2 text-center">
+                        {{ paragraph }}
+                    </dd>
+                    {{ /if }}
+
+                </dl>
+                {{ /content_blocks }}
+            </div>
+
+        </div>
+    </div>
+
+</div>

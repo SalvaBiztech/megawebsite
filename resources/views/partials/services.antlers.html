@@ -1,0 +1,81 @@
+<!-- ========================  Stretcher widget ======================== -->
+<section class="facilities rooms">
+    <!--<div class="section-header text-center">
+                <div class="container">
+                    <h2 class="title">Our services</h2>
+                   
+                </div>
+            </div>-->
+
+    <div class="container">
+        <div class="facilities-wrapper services">
+            <div class="row px-8 py-2">
+                <!--=== item ===-->
+                {{ frontpage:services_icon }}
+
+                {{ if type == 'service' }}
+                <div class="col-xs-6 col-sm-4">
+                    <!-- <img class="center" src="assets/images/Customized-Excursion.png" /> -->
+                    <h4 class="title serv-head text-3xl capitalize" style="text-align: center; color: #f36f23;">{{ heading }}</h4>
+                    <div class="icon-content" style="text-align: justify; color: #000;">
+                        {{ description }}
+                    </div>
+                </div>
+                {{ /if }}
+                {{ /frontpage:services_icon }}
+
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="destinations" class="rooms stretcher-wrapper">
+    <!-- === stretcher header === -->
+
+    <div class="section-header">
+        <div class="container">
+            <h2 class="title">What We Do </h2>
+            <!-- <p>
+                With the best luxury spa, salon and fitness experiences
+            </p> -->
+        </div>
+    </div>
+
+    <!-- === stretcher === -->
+    <div class="container-fluid">
+        <ul class="stretcher">
+            <!-- === stretcher item === -->
+            {{ frontpage:services }}
+            {{ if type == "service" }}
+            <li class="stretcher-item" style="background-image: url('{{ service_image }}');">
+                <!--logo-item-->
+                <div class="stretcher-logo">
+                    <div class="text">
+                        <!--<span class="text-intro h4">Uttar Pradesh</span>-->
+                    </div>
+                </div>
+                <!--main text-->
+                <figure class="bg-blue-700">
+                    <h4>{{ heading }}</h4>
+                    <figcaption></figcaption>
+                </figure>
+                <!--anchor-->
+                <!-- <a href="">Read More</a> -->
+            </li>
+            {{ /if }}
+            {{ if type == 'service_more' }}
+            <!-- === stretcher item more === -->
+            <li class="stretcher-item more">
+                <div class="more-icon">
+                    <span data-title-show="Our Products" data-title-hide="+"></span>
+                </div>
+                <a href="/products">{{ heading }}</a>
+            </li>
+            {{ /if}}
+            {{ /frontpage:services }}
+
+
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,45 @@
+{{ partial:partials/inner-banner }}
+<section id="about-us" class="rooms image-blocks image-blocks-header py-14">
+    <div class="container  px-5 py-6  max-w-8xl">
+
+
+        <div class="py-20 text-center container max-w-7xl mx-auto ">
+            {{ content }}
+
+            {{ if type == 'blocks' }}
+            <h2 class="text-3xl mb-3">{{ title }}</h2>
+            <div>
+                {{ paragraph }}
+            </div>
+
+            {{ /if }}
+            {{ /content }}
+        </div>
+
+
+        <div class="grid md:grid-cols-2 gap-8">
+            {{ content }}
+            {{ if type == "blocks_box"}}
+            <div class="col-span-1 px-5 shadow py-4 bg-white">
+
+                <h2 class="bg-blue-900 px-3 py-4 text-white">{{ heading }}</h2>
+                <div class="px-10 py-6">
+                    {{ list }}
+                </div>
+
+            </div>
+            {{ /if}}
+
+            {{ /content }}
+        </div>
+
+
+    </div>
+</section>
+
+<style>
+    ul li {
+        list-style-type: disc !important;
+        padding: 5px;
+    }
+</style>

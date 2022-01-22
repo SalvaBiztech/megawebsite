@@ -1,0 +1,102 @@
+<section class="frontpage-slider">
+    <div class="owl-slider owl-slider-header owl-slider-fullscreen">
+        <!-- === slide item === -->
+
+        {{ frontpage:sliders }}
+
+        {{ if type == 'slider' }}
+        <div class="item" id="desktop-ban1" style="background-image: url({{ slide_image }});">
+            <div class="box text-center">
+                <!-- <div class="container mobile-content">
+
+                    <p style="font-size: 60px; font-weight: 400;">Grab An Exciting <b style="font-weight: 600;">Free Stay</b></p>
+                    <p style="font-size: 60px; font-weight: 400; margin-top: -30px;">With Hallmark Club Card</p>
+
+                    <div class="animated" data-animation="fadeInUp">
+                        <a href="" class="btn btn-clean-dark"><b>Book Now</b></a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="item" id="mobile-ban1" style="background-image: url(assets/images/QH-MOB-Slider3.jpg);">
+                <div class="box text-center">
+                    <div class="container">
+                      
+                        <p style="font-size: 25px; color: #fff; font-weight: 400;">Grab An Exciting <b style="font-weight: 600;">Free Stay</b></p>
+                        <p style="font-size: 25px; color: #fff; font-weight: 400;">With Hallmark Club Card</p>
+                     
+                        <div class="animated" style="margin-top: 20px;">
+                            <a href="queens-hallmark.php" class="btn-mobile1"><b>Book Now</b></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        {{ /if }}
+        {{ /frontpage:sliders }}
+
+    </div>
+    <!--/owl-slider-->
+</section>
+
+
+<!-- ======================== Facilities ======================== -->
+
+<!-- <section class="rooms">
+            <div class="section-header text-center">
+                <div class="container">
+                    <h2 class="title">Welcome to Mega Panels</h2>
+                    <p>Experience & aminities</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <a href="#"><img class="one-card" style="width: 1305px;" src="{{ frontpage:home_banner }}" /></a>
+            </div>
+        </section> -->
+
+<section class="facilities">
+    <div class="box text-center">
+        <p style="color: #000; font-size: 30px;" class="title animated" data-animation="fadeInDown">
+            Welcome to Mega Panels
+        </p>
+        <p style="color: #0F5B35; font-size: 60px; font-weight: 600;" class="trans">
+            <span><b></b></span>
+        </p>
+        <!-- <p style="color: #a67e50; font-size: 25px;">Grab an exciting deals with our club card</p> -->
+        <!-- <div class="animated" data-animation="fadeInUp">
+                    <a href="queens-hallmark.php" class="btn btn-black"><b>Book Now</b></a>
+                </div> -->
+    </div>
+</section>
+
+<!-- ======================== Facilities ======================== -->
+
+<section class="facilities">
+    <div class="section-header text-center">
+        <div class="container">
+            <h2 class="title">Our Features</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="facilities-wrapper">
+            <div class="row one-card flex justfy-center item-center">
+                <!--=== item ===-->
+                {{ frontpage:features }}
+                {{ if type == 'feature' }}
+                <div class="col-xs-6 col-sm-3 feature-card shadow border mr-3 text-center">
+                    <!-- <img class="center" src="assets/images/Best Rated Hotels Resorts.png" /> -->
+                    <i class="fas {{ icon }} px-3 py-3  fa-3x" style="color: {{ color }};"></i>
+                    <p class="title serv-head" style="text-align: center; font-weight: 500;">{{ name }}</p>
+                </div>
+                {{ /if }}
+                {{ /frontpage:features }}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ partial:partials/services }}
+{{ partial:partials/projects-slider }}

@@ -1,0 +1,11 @@
+name: Admin
+super: true
+id: eb561d53-aab9-4d57-a40e-6b5083b03f06
+password_hash: $2y$10$wiU2E2AFLdc0oduZf2RXP.DvePVPNBe8CeaI4M.g15L0FCybDkWqa
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+  assets:
+    images:
+      mode: grid

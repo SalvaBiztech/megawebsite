@@ -1,0 +1,50 @@
+{{ partial:partials/inner-banner }}
+
+<!-- ========================  Cards ======================== -->
+
+<section class="cards">
+
+    <!-- === cards header === -->
+
+    <div class="section-header">
+        <div class="container">
+            <h2 class="title">{{ title }} Gallery </h2>
+            <!-- <p>Here's a selection of ionic sites related to art, fashion and design.</p> -->
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <!-- === item === -->
+            <!-- 
+            <div class="col-xs-12 col-md-8">
+                <figure>
+                    <figcaption style="background-image:url(assets/images/activity-1.jpg)">
+                        <img src="assets/images/activity-1.jpg" alt="" />
+                    </figcaption>
+                    <a href="#" class="btn btn-clean" onclick="">Museums</a>
+                </figure>
+            </div> -->
+
+            <!-- === item === -->
+            {{ content }}
+
+            {{ if type == 'item'}}
+            <div class="col-xs-6 col-md-4">
+                <figure>
+                    <figcaption style="background-image:url('{{image}}')">
+                        <img src="{{image}}" alt="" />
+                    </figcaption>
+                    <!-- <a href="#" class="btn text-white" style="background-color: #0f5b35;">{{ title }}</a> -->
+                </figure>
+            </div>
+            {{ /if }}
+            {{ /content }}
+
+        </div>
+        <!--/row-->
+
+    </div>
+    <!--/container-->
+</section>

@@ -1,0 +1,90 @@
+<section class="frontpage-slider">
+    <div class="owl-slider owl-slider-header owl-slider-fullscreen">
+        <!-- === slide item === -->
+
+        {{ frontpage:sliders }}
+        {{ if type == 'slider' }}
+        <div class="item" id="desktop-ban1" style="background-image: url({{ slide_image }});">
+            <div class="box text-center">
+                <!-- <div class="container mobile-content">
+
+                    <p style="font-size: 60px; font-weight: 400;">Grab An Exciting <b style="font-weight: 600;">Free Stay</b></p>
+                    <p style="font-size: 60px; font-weight: 400; margin-top: -30px;">With Hallmark Club Card</p>
+
+                    <div class="animated" data-animation="fadeInUp">
+                        <a href="" class="btn btn-clean-dark"><b>Book Now</b></a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- <div class="item" id="mobile-ban1" style="background-image: url(assets/images/QH-MOB-Slider3.jpg);">
+                <div class="box text-center">
+                    <div class="container">
+                      
+                        <p style="font-size: 25px; color: #fff; font-weight: 400;">Grab An Exciting <b style="font-weight: 600;">Free Stay</b></p>
+                        <p style="font-size: 25px; color: #fff; font-weight: 400;">With Hallmark Club Card</p>
+                     
+                        <div class="animated" style="margin-top: 20px;">
+                            <a href="queens-hallmark.php" class="btn-mobile1"><b>Book Now</b></a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        {{ /if }}
+        {{ /frontpage:sliders }}
+
+    </div>
+    <!--/owl-slider-->
+</section>
+
+
+<!-- ======================== Facilities ======================== -->
+
+<section class="rooms">
+    <div class="text-center">
+        <div class="container max-w-7xl mx-auto rounded-md bg-green-800 px-10 py-10">
+            <h2 class="text-white text-3xl">Your Ideal Construction Solution</h2>
+            <p class="text-white">From stylish home units to practical spaces and functional office structur es, Mega Panels can help you
+                build your dream project.</p>
+        </div>
+    </div>
+
+    <!-- <div class="container">
+        <a href="#"><img class="one-card" style="width: 1305px;" src="{{ frontpage:home_banner }}" /></a>
+    </div> -->
+</section>
+
+
+<!-- ======================== Facilities ======================== -->
+
+
+{{ partial:partials/features }}
+
+<div class="container md:px-56 max-w-8xl mx-auto  mt-10 ">
+
+    <div class="py-12 bg-white shadow-md mb-10">
+        <div class="mt-10">
+
+            <div class="relative w-full  rounded-md px-6 py-5">
+                {{ content_blocks }}
+                <dl class="grid md:grid-cols-1 gap-20">
+                    {{ if type == "card"}}
+
+                    <dd class="mt-2  text-3xl text-gray-900 col-span-1 p-2 text-center">
+                        {{ paragraph }}
+                    </dd>
+                    <div class="py-2 px-2 w-full col-span-2">
+                        <img class="w-full h-full" src="{{ image }}" alt="">
+                    </div>
+
+                    {{ /if }}
+
+                </dl>
+                {{ /content_blocks }}
+            </div>
+
+        </div>
+    </div>
+
+</div>

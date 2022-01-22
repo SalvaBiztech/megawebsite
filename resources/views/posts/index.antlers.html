@@ -1,0 +1,50 @@
+{{ partial:partials/inner-banner }}
+<div class="blog blog-category mt-16">
+
+    <div class="container">
+
+        <div class="row">
+            <!-- === blog-content === -->
+
+            <div class="col-sm-12 col-md-12 mt-16">
+                {{ categories }}
+                <div class="row">
+                    <!-- === article item === -->
+                    {{ if type == 'posts'}}
+
+                    {{ grid_entries }}
+                    <div class="col-sm-6 col-md-4">
+                        <a href="{{ uri }}">
+                            <article>
+                                <div class="image border-2 rounded-md">
+                                    <img src="{{ featured_image }}" alt="" />
+                                </div>
+                                <div class="text">
+                                    <!-- <div class="time">
+                                        <span>22</span>
+                                        <span>05</span>
+                                        <span>2014</span>
+                                    </div> -->
+                                    <h2 class="h5 flex py-2 justify-center items-center text-white bg-orange-500 text-center rounded-lg">
+                                        {{ title }}
+                                    </h2>
+                                </div>
+                            </article>
+                        </a>
+                    </div>
+                    {{ /grid_entries }}
+                    {{ /if }}
+                    <!-- === article item === -->
+                </div>
+                {{ /categories }}
+
+
+            </div>
+
+        </div>
+        <!--/row-->
+
+
+    </div>
+    <!--/container-->
+</div>

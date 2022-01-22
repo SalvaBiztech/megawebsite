@@ -1,0 +1,25 @@
+<section class="facilities">
+    <div class="section-header text-center">
+        <div class="container">
+            <h2 class="title">Our Features</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="facilities-wrapper">
+            <div class="grid grid-cols-2 one-card md:grid-cols-6 gap-8 px-6">
+                <!--=== item ===-->
+                {{ frontpage:features }}
+                {{ if type == 'feature' }}
+                <div class="feature-card shadow border mb-5 text-center">
+                    <!-- <img class="center" src="assets/images/Best Rated Hotels Resorts.png" /> -->
+                    <i class="{{ icon }} px-3 py-3  fa-3x" style="color: {{ color }};"></i>
+                    <p class="title serv-head" style="text-align: center; font-weight: 500;">{{ name }}</p>
+                </div>
+                {{ /if }}
+                {{ /frontpage:features }}
+
+            </div>
+        </div>
+    </div>
+</section>

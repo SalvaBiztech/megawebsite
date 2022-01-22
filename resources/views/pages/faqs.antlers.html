@@ -1,0 +1,73 @@
+{{ partial:partials/inner-banner }}
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+<div class="container max-w-8xl mx-auto  py-12">
+    <div class="flex flex-row  flex-wrap">
+
+
+        <main role="main" class="w-full px-2 bg-white rounded-lg py-3">
+
+            <div class="py-5 bg-white md:py-7 lg:py-14">
+                <div class="container mx-auto px-5 xl:max-w-screen-xl">
+                    <h1 class="text-3xl font-bold text-center text-gray-900 md:text-4xl">Frequently asked questions</h1>
+                    <section class="faq-steps px-48">
+
+                        <!-- Step 1 -->
+
+                        <div class="mt-5 border-t md:mt-7">
+                            {{ content }}
+                            {{ if type == 'card'}}
+                            <div class="border-b" x-data="{ open: false }">
+                                <div class="flex items-center py-5 cursor-pointer select-none" @click="open = !open">
+                                    <svg class="flex-shrink-0 w-2 h-2 mr-5 text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 16C10.1217 16 12.1566 15.1571 13.6569 13.6569C15.1571 12.1566 16 10.1217 16 8C16 5.87827 15.1571 3.84344 13.6569 2.34314C12.1566 0.842854 10.1217 0 8 0C5.87827 0 3.84344 0.842854 2.34314 2.34314C0.842854 3.84344 0 5.87827 0 8C0 10.1217 0.842854 12.1566 2.34314 13.6569C3.84344 15.1571 5.87827 16 8 16V16Z" />
+                                    </svg>
+                                    <h2 class="mr-5 text-3xl font-medium text-gray-900">{{ heading }}</h2>
+                                    <svg class="flex-shrink-0 w-4 h-4 ml-auto text-gray-500 transform rotate-45" :class="{'rotate-45' : open == true}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                        <path d="M8 0C8.26522 0 8.51957 0.105357 8.70711 0.292893C8.89464 0.48043 9 0.734784 9 1V7H15C15.2652 7 15.5196 7.10536 15.7071 7.29289C15.8946 7.48043 16 7.73478 16 8C16 8.26522 15.8946 8.51957 15.7071 8.70711C15.5196 8.89464 15.2652 9 15 9H9V15C9 15.2652 8.89464 15.5196 8.70711 15.7071C8.51957 15.8946 8.26522 16 8 16C7.73478 16 7.48043 15.8946 7.29289 15.7071C7.10536 15.5196 7 15.2652 7 15V9H1C0.734784 9 0.48043 8.89464 0.292893 8.70711C0.105357 8.51957 0 8.26522 0 8C0 7.73478 0.105357 7.48043 0.292893 7.29289C0.48043 7.10536 0.734784 7 1 7H7V1C7 0.734784 7.10536 0.48043 7.29289 0.292893C7.48043 0.105357 7.73478 0 8 0V0Z" />
+                                    </svg>
+                                </div>
+                                <div class="pb-5 px-10 text-gray-700" :class="{'hidden' : open == false}">
+                                    {{ paragraph }}
+                                </div>
+                            </div>
+                            {{ /if }}
+                            {{ /content }}
+                        </div>
+                        <!-- END Step 1 -->
+                    </section>
+                    <div class="max-w-4xl mx-auto space-y-5 mt-5 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-5 md:mt-7 md:gap-7">
+                        <div class="p-5 rounded-lg border shadow-sm text-center">
+                            <svg class="w-8 h-8 mx-auto text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                            <p class="text-xl font-medium text-gray-900 mt-2">+255 785 676 207</p>
+                            <p class="mt-2 text-gray-500">We are happy to help you.</p>
+                        </div>
+                        <div class="p-5 rounded-lg border shadow-sm text-center bg-gray-50">
+                            <svg class="w-8 h-8 mx-auto text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                            </svg>
+                            <p class="text-xl font-medium text-blue-600 mt-2">mega@mega.co.tz</p>
+                            <p class="mt-2 text-gray-500">Fastest way to get answers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+
+        <!-- Right SideBar -->
+
+    </div>
+
+
+</div>
+
+
+<style>
+    .faq-steps p {
+        margin-bottom: 10px;
+        line-height: 30px;
+    }
+</style>

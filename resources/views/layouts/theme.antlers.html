@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Mobile Web-app fullscreen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Meta tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" type="image/png" sizes="512x512" href=""> -->
+
+    <!--Title-->
+    <title>{{ title ?? site:name }}</title>
+
+    <!--CSS styles-->
+    <link rel="stylesheet" media="all" href="theme/css/bootstrap.css" />
+    <link rel="stylesheet" media="all" href="theme/css/animate.css" />
+    <!-- <link rel="stylesheet" media="all" href="theme/fontawesome/css/font-awesome.css" /> -->
+    <link rel="stylesheet" media="all" href="theme/fontawesome-5/css/all.min.css" />
+    <!-- <link rel="stylesheet" media="all" href="theme/css/linear-icons.css" /> -->
+    <!-- <link rel="stylesheet" media="all" href="theme/css/hotel-icons.css" /> -->
+    <link rel="stylesheet" media="all" href="theme/css/magnific-popup.css" />
+    <link rel="stylesheet" media="all" href="theme/css/owl.carousel.css" />
+    <link rel="stylesheet" media="all" href="theme/css/datepicker.css" />
+    <link rel="stylesheet" media="all" href="theme/css/theme.css" />
+    <link rel="stylesheet" media="all" href="css/tailwind.css" />
+    <!-- <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet"> -->
+
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,500&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- If using Antlers -->
+    {{ livewire:styles }}
+</head>
+
+<body>
+
+    <div class="page-loader"></div>
+
+    <div class="wrapper">
+        <!-- ========================  Header content ======================== -->
+        {{ partial:partials/header }}
+        <style>
+            @media (min-width: 320px) and (max-width: 480px) {
+
+                .gift-four {
+                    margin-top: 0px !important;
+                }
+
+                .modal-body {
+                    position: relative;
+                    padding: 15px;
+                    width: 100% !important;
+                }
+            }
+        </style>
+        <!-- ========================  Page content ======================== -->
+
+        <main style="background-color: #eeeeee;">{{ template_content }}</main>
+
+
+        {{ partial:partials/footer }}
+
+    </div>
+    <!--/wrapper-->
+    <!-- If using Antlers -->
+    {{ livewire:scripts }}
+    <!--JS files-->
+    <script src="theme/js/jquery.min.js"></script>
+    <script src="theme/js/jquery-ui.js"></script>
+    <script src="theme/js/jquery.bootstrap.js"></script>
+    <script src="theme/js/jquery.magnific-popup.js"></script>
+    <script src="theme/js/jquery.owl.carousel.js"></script>
+    <script src="theme/js/main.js"></script>
+</body>
+
+</html>
